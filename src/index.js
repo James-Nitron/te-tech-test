@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 rl.question(chalk.blue("Please provide the number of items to display in an array? "), items => {
     if (!items || isNaN(items) || items < 0) { console.log(chalk.red('Error: Please provide a number greater than or equal to 0.')), rl.close()  } // Check if string is not a number and is not less than 0 else error and rl.close
         rl.question(chalk.blue("Please provide a number to divide the array into equally sized arrays. "), divide => {
-            if (!divide || isNaN(divide) || divide <= 0) { return console.log(chalk.red('Error: Please provide a number greater than 0.')), rl.close() } // Check if string is not a number and is not less than or equal to 0 else error and rl.close
+            if (!divide || isNaN(divide) || divide <= 0 || divide > items) { return console.log(chalk.red('Error: Please provide a number greater than 0 and less than the number of items in the array.')), rl.close() } // Check if string is not a number and is not less than or equal to 0 else error and rl.close
             chunk(parseInt(items), parseInt(divide))
         });
 });
