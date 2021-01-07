@@ -1,10 +1,11 @@
 {
   "name": "twig-education",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon",
+    "start": "nodemon",
     "lint": "eslint . --ext .js"
   },
   "keywords": [],
@@ -13,10 +14,9 @@
   "devDependencies": {
     "eslint": "^7.17.0",
     "nodemon": "^2.0.7",
-    "prettier": "^2.2.1",
-    "rimraf": "^3.0.2"
+    "prettier": "^2.2.1"
   },
   "dependencies": {
-    "prompt": "^1.1.0"
+    "chalk": "^3.0.0"
   }
 }
